@@ -121,9 +121,6 @@
 	
 		# LOG PARTICIPANT CREATED
 		logIt($B_ID, $p_log_code, $P_ID);
-		require_once('UKM/innslag.class.php');
-		$band_object_2013 = new innslag($B_ID);
-		$band_object_2013->statistikk_oppdater();
 //		stat_realtime_add($KOMMUNE_ID, $B_ID, $bt_id, ($bt_id==1?$kategori:''), 0, $SEASON);
 		require_once('UKM/curl.class.php');
 		$CURL = new UKMCURL();
