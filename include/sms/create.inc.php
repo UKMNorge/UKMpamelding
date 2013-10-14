@@ -207,6 +207,7 @@
 			$SMS = $SMS->newPwd();
 			$_SESSION['SMSpass'] = $SMS;
 				$message = str_replace('#code', $SMS, $lang['confirmSMS']);
+				require_once('UKM/sms.class.php');
 				$SMS = new SMS('pamelding',1);
 				$SMS->text($message)->to($_POST['p_phone_first'])->from('UKMNorge')->ok();			
 
