@@ -207,12 +207,12 @@
 			$SMS = $SMS->newPwd();
 			$_SESSION['SMSpass'] = $SMS;
 				$message = str_replace('#code', $SMS, $lang['confirmSMS']);
-/*
+				require_once('UKM/sql.class.php');
 				require_once('UKM/sms.class.php');
 				$SMS = new SMS('pamelding',1);
 				$SMS->text($message)->to($_POST['p_phone_first'])->from('UKMNorge')->ok();			
-*/
 
+/*
 				$smsURL = 'http://www.sveve.no/SMS/SendSMS?user=ukm&msg='.urlencode(utf8_encode($message)).'&to='.$_POST['p_phone_first'].'&from=UKMNorge';
 //				$APIres = new APIcall('SMSlog', array('to'=>$_POST['p_phone_first'], 'message'=>urlencode($message),'from'=>'UKMNorge'));
 				$curl = curl_init();
@@ -231,6 +231,7 @@
 										  'logsystem'=>'pameldingCreate',
 										  'logmessage'=>$message));
 				$newLogSQL12->run();			
+*/
 			logIt($B_ID, 5, $SMS);
 		}
 	if(in_array($kategori, $WORK))
