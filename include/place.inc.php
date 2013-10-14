@@ -32,10 +32,14 @@ if(isset($PLACE_ID)) {
 
 	## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ##
 	## LAGT TIL 31.10.2011
+/*
 	require_once('/home/ukmno/public_html/UKM/pamelding/contact.inc.php');
 	require_once('/home/ukmno/public_html/UKM/api/kontakt.class.php');
 	$pl_contact = getContact($PLACE_ID, $KOMMUNE_ID);
 	$pl_contact = new kontakt($pl_contact['id']);
+*/
+	$pl = new monstring($PLACE_ID);
+	$pl_contact = $pl->hovedkontakt($KOMMUNE_ID);
 	## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ##
 	
 /*	if($_SESSION['UKM_PAM_BROWSER']!='Internet Explorer' && $pl_contact['picture'] > 0)
