@@ -38,6 +38,7 @@ if(isset($PLACE_ID)) {
 	$pl_contact = getContact($PLACE_ID, $KOMMUNE_ID);
 	$pl_contact = new kontakt($pl_contact['id']);
 */
+	require_once('UKM/monstring.class.php');
 	$pl = new monstring($PLACE_ID);
 	$pl_contact = $pl->hovedkontakt($KOMMUNE_ID);
 	## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ##
