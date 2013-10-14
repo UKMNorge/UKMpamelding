@@ -244,4 +244,8 @@
 		$MSG = array(true, 'Innslaget ble lagt til');
 	
 	$_SESSION['B_ID'] = $B_ID;
+	require_once('UKM/curl.class.php');
+	$CURL = new UKMCURL();
+	$CURL->request('http://api.ukm.no/innslag:statistikk_oppdater/'. $_SESSION['B_ID']);
+
 ?>

@@ -30,6 +30,9 @@ $_SESSION['MSG'] = array(true, $lang['profilepage_saved']);
 ## VALIDATE THE BAND AGAIN
 require_once('include/validation.inc.php');
 validateBand($_SESSION['B_ID']);
+require_once('UKM/curl.class.php');
+$CURL = new UKMCURL();
+$CURL->request('http://api.ukm.no/innslag:statistikk_oppdater/'. $_SESSION['B_ID']);
 
 if(isset($_POST['b_kommune']))
 	logIt($_SESSION['B_ID'], 32, $_POST['b_kommune']);
