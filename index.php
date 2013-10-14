@@ -2,7 +2,7 @@
 ini_set('session.cookie_domain', 'pamelding.ukm.no');
 ini_set('session.gc_maxlifetime', 60*60*8);
 session_start();
-error_reporting(E_NONE);
+error_reporting(E_ALL);
 
 if(!isset($_SESSION['UKM_PAM_BROWSER'])) {
 	require_once('include/browser.inc.php');

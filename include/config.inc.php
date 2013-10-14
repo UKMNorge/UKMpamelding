@@ -16,7 +16,7 @@ $FILES = array('velg_type','kontaktperson','sms','newphone','dinside',
 			   'skiftinnslag','redigerkontakt','nytt_innslag','profilside_enk',
 			   'sms_enk');
 
-require_once('UKM/inc/pamelding-bandtypes.inc.php');
+require_once('UKM/inc/phaseout.pamelding-bandtypes.inc.php');
 
 $WORK = array('nettredaksjon','konferansier','arrangor','sceneteknikk');
 
