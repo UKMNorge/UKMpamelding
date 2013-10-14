@@ -1,4 +1,5 @@
 <?php
+	require_once('include/api.smas.inc.php');
 	require_once('include/password.inc.php');
 	###########################################################
 	###########################################################
@@ -47,13 +48,13 @@
 		$SMS = $SMS->newPwd();
 		$_SESSION['SMSpass'] = $SMS;
 			$message = str_replace('#code', $SMS, $lang['confirmSMS']);
+/*
 			require_once('UKM/sms.class.php');
 			$SMS = new SMS('pamelding',2);
 			$SMS->text($message)->to($_POST['p_phone_first'])->from('UKMNorge')->ok();			
-				var_dump($SMS);
-/*
+*/
+
 			$smsURL = 'http://www.sveve.no/SMS/SendSMS?user=ukm&msg='.urlencode(utf8_encode($message)).'&to='.$_POST['p_phone_first'].'&from=UKMNorge';
-			$APIres = new APIcall('SMSlog', array('to'=>$_POST['p_phone_first'], 'message'=>urlencode($message),'from'=>'UKMNorge'));
 			$curl = curl_init();
 			curl_setopt($curl, CURLOPT_URL, $smsURL);
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -67,10 +68,9 @@
 			$newLogSQL12 = new SQL($newLogSQL12,
 								array('logfrom'=>'UKMNorge',
 									  'logto'=>$_POST['p_phone_first'],
-									  'logsystem'=>'pameldingUKMnew',
+									  'logsystem'=>'pameldingNewPhone',
 									  'logmessage'=>$message));
 			$newLogSQL12->run();
-*/
 			
 		logIt($_SESSION['B_ID'], 5, $SMS);
 	} else {

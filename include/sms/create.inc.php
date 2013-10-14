@@ -207,21 +207,19 @@
 			$SMS = $SMS->newPwd();
 			$_SESSION['SMSpass'] = $SMS;
 				$message = str_replace('#code', $SMS, $lang['confirmSMS']);
+/*
 				require_once('UKM/sms.class.php');
 				$SMS = new SMS('pamelding',1);
 				$SMS->text($message)->to($_POST['p_phone_first'])->from('UKMNorge')->ok();			
-				var_dump($SMS);
+*/
 
-//				$smsURL = 'http://www.sveve.no/SMS/SendSMS?user=ukm&msg='.urlencode(utf8_encode($message)).'&to='.$_POST['p_phone_first'].'&from=UKMNorge';
+				$smsURL = 'http://www.sveve.no/SMS/SendSMS?user=ukm&msg='.urlencode(utf8_encode($message)).'&to='.$_POST['p_phone_first'].'&from=UKMNorge';
 //				$APIres = new APIcall('SMSlog', array('to'=>$_POST['p_phone_first'], 'message'=>urlencode($message),'from'=>'UKMNorge'));
-/*
 				$curl = curl_init();
 				curl_setopt($curl, CURLOPT_URL, $smsURL);
 				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 				$res = curl_exec($curl);
-*/
 
-/*
 				// NYTT LOGG-SYSTEM HØSTEN 2012
 				$newLogSQL12 = "INSERT INTO `log_sms_system`
 					(`log_from` ,`log_to` ,`log_system` ,`log_message`)
@@ -230,10 +228,9 @@
 				$newLogSQL12 = new SQL($newLogSQL12,
 									array('logfrom'=>'UKMNorge',
 										  'logto'=>$_POST['p_phone_first'],
-										  'logsystem'=>'pameldingUKM',
+										  'logsystem'=>'pameldingCreate',
 										  'logmessage'=>$message));
-				$newLogSQL12->run();
-*/			
+				$newLogSQL12->run();			
 			logIt($B_ID, 5, $SMS);
 		}
 	if(in_array($kategori, $WORK))
