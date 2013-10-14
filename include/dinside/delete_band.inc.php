@@ -18,7 +18,11 @@ if(isset($_GET['delete']) && isset($_GET['md'])) {
 		$update = $update->run();
 		# REPORT MSG
 		$MSG = array(true, $b['b_name']. ' ble avmeldt!');
-		stat_realtime_avmeld($KOMMUNE_ID, $_GET['delete'], $SEASON);
+//		stat_realtime_avmeld($KOMMUNE_ID, $_GET['delete'], $SEASON);
+		require_once('UKM/innslag.class.php');
+		$band_object_2013 = new innslag($_GET['delete']);
+		$band_object_2013->statistikk_oppdater();
+
 		logIt($b['b_id'], 23, $_SERVER['REMOTE_ADDR']);
 	} else
 		$MSG = array(false,'Kunne ikke melde av ' . $b['b_name']);
