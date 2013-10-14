@@ -47,10 +47,10 @@
 		$SMS = new pwdGen('cV00Vc');
 		$SMS = $SMS->newPwd();
 		$_SESSION['SMSpass'] = $SMS;
-			$message = str_replace('#code', $SMS, $lang['confirmSMS']);
+			$message = utf8_encode(str_replace('#code', $SMS, $lang['confirmSMS']));
 			require_once('UKM/sql.class.php');
 			require_once('UKM/sms.class.php');
-			$SMS = new SMS('pamelding',2);
+				$SMS = new SMS('pamelding','newphone.inc', $PLACE_ID);
 			$SMS->text($message)->to($_POST['p_phone_first'])->from('UKMNorge')->ok();			
 
 /*
