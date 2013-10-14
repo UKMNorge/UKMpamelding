@@ -89,7 +89,6 @@ if($_GET['steg'] == 'velg_type' && isset($_GET['type']) && isset($_GET['id'])) {
 if(!in_array($_GET['steg'], $FILES))
 	$_GET['steg'] = 'start';
 
-require_once('/home/ukmno/public_html/UKM/pamelding/stat_realtime.inc.php');
 												  
 ## INKLUDER VENSTREKOLONNE
 require_once('include/place.inc.php');
