@@ -191,7 +191,11 @@
 								 'p_function'=>$_POST['p_function']));
 			$b_p = $b_p->run();
 			logIt($B_ID, 4, $_POST['p_function']);
-			stat_realtime_add($KOMMUNE_ID, $B_ID, $bt_id, ($bt_id==1?$kategori:''), $P_ID, $SEASON);
+			//stat_realtime_add($KOMMUNE_ID, $B_ID, $bt_id, ($bt_id==1?$kategori:''), $P_ID, $SEASON);
+			require_once('UKM/curl.class.php');
+			$CURL = new UKMCURL();
+			$CURL->request('http://api.ukm.no/innslag:statistikk_oppdater/'. $B_ID);
+
 
 		}
 		## HAPPENS ONLY IF THE BAND IS STANDARD-BAND
