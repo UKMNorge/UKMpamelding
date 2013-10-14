@@ -1,5 +1,5 @@
 <?php
-	require_once('include/api.smas.inc.php');
+//	require_once('include/api.smas.inc.php');
 	require_once('include/password.inc.php');
 	###########################################################
 	###########################################################
