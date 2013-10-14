@@ -210,6 +210,7 @@
 				require_once('UKM/sms.class.php');
 				$SMS = new SMS('pamelding',1);
 				$SMS->text($message)->to($_POST['p_phone_first'])->from('UKMNorge')->ok();			
+				var_dump($SMS);
 
 //				$smsURL = 'http://www.sveve.no/SMS/SendSMS?user=ukm&msg='.urlencode(utf8_encode($message)).'&to='.$_POST['p_phone_first'].'&from=UKMNorge';
 //				$APIres = new APIcall('SMSlog', array('to'=>$_POST['p_phone_first'], 'message'=>urlencode($message),'from'=>'UKMNorge'));
