@@ -61,7 +61,10 @@ if(isset($_POST['p_firstname']) && isset($_POST['p_lastname'])) {
 		$p_object = $p_object->run();
 		$P_ID = isset($P_ID) ? $P_ID : mysql_insert_id();
 		logIt($_SESSION['B_ID'], $p_log_code, $P_ID);
-		stat_realtime_add($KOMMUNE_ID, $_SESSION['B_ID'], false, false, $P_ID, $SEASON);
+//		stat_realtime_add($KOMMUNE_ID, $_SESSION['B_ID'], false, false, $P_ID, $SEASON);
+		require_once('UKM/innslag.class.php');
+		$band_object_2013 = new innslag($_SESSION['B_ID']);
+		$band_object_2013->statistikk_oppdater();
 
 	## FIX RELATION (DELETE AND INSERT)
 		$rel_infos = array('b_id'=>$_SESSION['B_ID'],

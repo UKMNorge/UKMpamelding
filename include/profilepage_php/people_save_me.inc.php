@@ -20,7 +20,11 @@
 	## IF A SUCESS
 	if($b_p) {
 		$MSG = array(true, ((isset($saveMSG)&&$saveMSG) ? $lang['people_saved'] : $lang['people_added']));
-		stat_realtime_add($KOMMUNE_ID, $_SESSION['B_ID'], false, false, $_SESSION['UKM_DINSIDE_UID'], $SEASON);
+//		stat_realtime_add($KOMMUNE_ID, $_SESSION['B_ID'], false, false, $_SESSION['UKM_DINSIDE_UID'], $SEASON);
+		require_once('UKM/innslag.class.php');
+		$band_object_2013 = new innslag($_SESSION['B_ID']);
+		$band_object_2013->statistikk_oppdater();
+
 		logIt($_SESSION['B_ID'], 17, $_POST['p_my_function']);
 	} else {
 		$MSG = array(false, ($saveMSG ? $lang['people_not_saved'] : $lang['people_not_added']));	

@@ -10,7 +10,11 @@ $del_rel = $del_rel->run();
 ## GIVE CORRECT FEEDBACK TO USER
 if($del_rel) {
 	$MSG = array(true, $lang['people_deleted']);
-	stat_realtime_remove($KOMMUNE_ID, $_SESSION['B_ID'], $_POST['someID_input'], $SEASON);
+//	stat_realtime_remove($KOMMUNE_ID, $_SESSION['B_ID'], $_POST['someID_input'], $SEASON);
+	require_once('UKM/innslag.class.php');
+	$band_object_2013 = new innslag($_SESSION['B_ID']);
+	$band_object_2013->statistikk_oppdater();
+
 	logIt($_SESSION['B_ID'], 18, $_POST['someID_input']);
 } else {
 	$MSG = array(false, $lang['people_not_deleted']);	
