@@ -1,0 +1,208 @@
+legend {
+	font-size: 18px;
+	margin-bottom: 4px;
+	font-weight:bold;
+}
+
+fieldset {
+	margin-top: 20px;	
+	background: #efeeee;
+	padding-left: 5px;
+	}
+.inputBoks {
+	font-size: 16px;
+	border: 1px solid #666;
+}
+textarea {
+	font-size: 14px;
+	border: 1px solid #666;
+	width: 270px;
+	height: 100px;
+}
+.menuleft {
+	font-size: 18px;
+	margin-top: 30px;	
+	margin-bottom: 5px;
+}
+.dinsideLink a {
+	font-size: 18px;
+	font-weight:bold;
+	text-decoration: none;
+	margin-bottom: 2px;	
+}
+.dinsideLink {
+	text-decoration: none;	
+}
+
+/* STANDARDCSS FOR DESIGN */
+
+/* BODY STYLES */
+html, body {
+	height: 100%;
+}
+body {
+	background: #a0cf67;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+/* DESIGN TABLE AND DIVS */
+table.centraltable {
+	width:952px;
+	height:100%;
+	margin-top:0px;
+}
+td.centralbanner {
+	background-image:url(http://ukm.no/ukmno/grafikk/2011/banner_pam.png);
+	background-repeat:no-repeat;
+	width:952px;
+	height:147px;
+}
+td.centralcontent {
+	background-image:url(http://ukm.no/ukmno/grafikk/2011/bg.png);
+	background-repeat:repeat-y;
+}
+td.bottomsep {
+	background-image:url(http://ukm.no/ukmno/grafikk/2011/bottom.png);
+	background-repeat:no-repeat;
+	width:952px;
+	height:27px;
+}
+td.footer {
+	background-image:url(http://ukm.no/ukmno/grafikk/2011/footerbg.png);
+	background-repeat:repeat-y;
+}
+td.footer table {
+        margin-left: 60px;
+        margin-right: 60px;
+}
+td.footer table th {
+        color: #1e4947;
+        font-weight: bold;
+        font-size: 13px;
+}
+td.footer table td, td.footer table td a {
+        font-weight: normal;
+        font-size: 13px;
+}
+td.centralbottom {
+	background-image:url(http://ukm.no/ukmno/grafikk/2011/footer.png);
+	background-repeat:no-repeat;
+	width:952px;
+	height:65px;
+	text-align:center;
+	font-size:14px;
+	color:#fff;
+	margin-bottom:6px;
+	text-decoration:none;
+}
+td.centralbottom a {
+	text-decoration: none;	
+}
+
+#columnleft {
+	width:174px;
+	float:left;
+	display:block;
+	padding-left: 9px;
+}
+#columncenter {
+	float:left;
+	width:740px;
+	display:block;
+}
+#dummybox {
+	margin:10px;
+	margin-top:11px;
+	margin-bottom:20px;
+	min-height:200px;
+	display:block;
+}
+#mycontent {
+	padding-left:30px;
+	padding-right:16px;
+	padding-top:5px;
+}
+
+/* CONTENT */
+#mycontent a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* FRONTPAGE BOX */
+.fpbox_header, .fpbox_header a {
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+	text-decoration: underline;
+}
+.fpbox_text {
+        font-weigt: normal;
+        font-size: 14px;
+        color: #000;
+        padding-left: 4px;
+}
+
+/* MENU */
+#columnleft table {
+        margin-left: 10px;
+}
+.menu_top {
+	background-image:url(http://ukm.no/ukmno/grafikk/2011/menu_top.png);
+	background-repeat:no-repeat;
+	width:172px;
+	height:27px;
+}
+.menu_bottom {
+	background-image:url(http://ukm.no/ukmno/grafikk/2011/menu_bottom.png);
+	background-repeat:no-repeat;
+	width:172px;
+	height:27px;
+}
+.menu_bg {
+	background-image:url(http://ukm.no/ukmno/grafikk/2011/menu_bg.png);
+	background-repeat:repeat-y;
+}
+
+/* LINKS */
+a{
+	font-size:12px;
+	font-weight:normal;
+	color:#222222;
+	font-decoration:none;
+}
+a:hover {
+	color:#f3722b;
+}
+
+a.activ{
+	font-size:12px;
+	font-weight:normal;
+	color:#111111;
+	font-decoration:none;
+}
+a.activ:hover {
+	color:#111111;
+}
+
+/* 2012 STYLE CORRECTIONS */
+#single h1 { font-size: 26px; margin-bottom: 10px;}
+#single h2 { font-size: 22px; margin-bottom: 10px;}
+#single h3 { font-size: 18px; margin-bottom: 10px;}
+#subscr_table td a, #subscr_table2 td a {font-size: 12px; font-weight: bold;}
+.menuleft {font-size: 18px; font-weight: bold; line-height: 24px; } 
+.font20, .font20 a {font-size: 16px;}
+.font12, .font12 a {font-size: 12px;}
+.font11, .font11 a {font-size: 11px;}
+
+.copy a, .wpzoom a {
+	font-size: 10px;
+}
+.wpzoom, .copy span, .copy, #footer {
+	color: #999;
+}
+
+#UKMnav-menu_pamelding a, #UKMnav-menu_pamelding a:hover, #UKMnav-menu_pamelding a.active {	
+	background: url('http://ico.ukm.no/faner/ukmno_pamelding_active.png') no-repeat;
+}

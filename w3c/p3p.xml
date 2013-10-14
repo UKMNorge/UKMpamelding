@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<META xmlns="http://www.w3.org/2002/01/P3Pv1">
+  <POLICY-REFERENCES>
+    <POLICY-REF about="#WebsitePolicy">
+      <INCLUDE>/*</INCLUDE>
+    </POLICY-REF>
+  </POLICY-REFERENCES>
+  <POLICIES>
+    <POLICY name="WebsitePolicy" discuri="http://pamelding.ukm.no/w3c/policy.html" opturi="http://pamelding.ukm.no/w3c/policy.html">
+      <ENTITY>
+        <DATA-GROUP>
+          <DATA ref="#business.name">UKM Norge</DATA>
+          <DATA ref="#business.contact-info.online.email">support@ukm.no</DATA>
+          <DATA ref="#business.contact-info.postal.street">Fjordgt 1</DATA>
+          <DATA ref="#business.contact-info.postal.city">Trondheim</DATA>
+          <DATA ref="#business.contact-info.postal.stateprov">Sor Trondelag</DATA>
+          <DATA ref="#business.contact-info.postal.postalcode">7010</DATA>
+          <DATA ref="#business.contact-info.postal.country">NO</DATA>
+          <DATA ref="#business.contact-info.telecom">46415500</DATA>
+        </DATA-GROUP>
+      </ENTITY>
+      <ACCESS>
+        <all />
+      </ACCESS>
+      <DISPUTES-GROUP>
+        <DISPUTES resolution-type="service" service="http://pamelding.ukm.no/w3c/policy.html">
+          <REMEDIES>
+            <correct />
+            <law />
+          </REMEDIES>
+        </DISPUTES>
+      </DISPUTES-GROUP>
+      <STATEMENT>
+        <CONSEQUENCE>To sign in, we need to identify the user</CONSEQUENCE>
+        <PURPOSE>
+          <admin />
+        </PURPOSE>
+        <RECIPIENT>
+          <ours />
+        </RECIPIENT>
+        <RETENTION>
+          <stated-purpose />
+        </RETENTION>
+        <DATA-GROUP>
+          <DATA ref="#user" />
+          <DATA ref="#dynamic.cookies" />
+        </DATA-GROUP>
+      </STATEMENT>
+    </POLICY>
+  </POLICIES>
+</META>

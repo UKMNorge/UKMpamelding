@@ -1,0 +1,235 @@
+legend {
+	font-size: 22px;
+	font-weight:bold;
+}
+
+fieldset {
+	margin-top: 20px;	
+	background: #efeeee;
+}
+.inputBoks {
+	font-size: 16px;
+	border: 1px solid #666;
+}
+textarea {
+	font-size: 14px;
+	border: 1px solid #666;
+	width: 270px;
+	height: 100px;
+}
+
+/* STANDARDCSS FOR DESIGN */
+
+html,body {
+	height: 100%;
+}
+
+body {
+background-color:#fff;
+background-image:url(http://ukm.no/ukmno/grafikk/2010/bg2.jpg);
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-position:top center;
+margin-top:0px;
+margin-bottom:0px;
+}
+
+#mycontent a {
+ font-weight: bold;
+ text-decoration: underline;
+}
+
+td.centralcontent {
+background-image:url(http://ukm.no/ukmno/grafikk/2010/bgcentral2.jpg);
+background-repeat:repeat-y;
+width:914px;
+}
+
+td.centralbanner {
+background-image:url(http://pamelding.ukm.no/img/banner.jpg);
+background-repeat:no-repeat;
+width:950px;
+height:340px;
+}
+
+td.centralbottom {
+background-image:url(http://ukm.no/ukmno/grafikk/2010/bottom2.jpg);
+background-repeat:no-repeat;
+width:950px;
+height:164px;
+}
+
+td.leftborder{
+background-image:url(http://ukm.no/ukmno/grafikk/2010/leftborder.jpg);
+background-repeat:repeat-y;
+width:18px;
+}
+
+
+
+td.rightborder{
+background-image:url(http://ukm.no/ukmno/grafikk/2010/borderright.jpg);
+background-repeat:repeat-y;
+width:18px;
+}
+
+table.centraltable {
+width:950px;
+height:100%;
+margin-top:30px;
+}
+
+h2.menuright{
+background-image:url(http://ukm.no/ukmno/grafikk/2010/ukm_h_right.png);
+width:170px;
+height:35px;
+padding-left:20px;
+padding-top:8px;
+/* Hide from IE-Mac */
+width:150px;
+height:27px;
+/* End hide */
+font-size:15px;
+color:#fff5b0;
+font-weight:bold;
+margin-right:-5px;
+float:right;
+}
+
+h2.menuleft{
+background-image:url(http://ukm.no/ukmno/grafikk/2010/ukm_h_left.png);
+width:170px;
+height:35px;
+padding-left:20px;
+padding-top:8px;
+/* Hide from IE-Mac */
+width:150px;
+height:27px;
+/* End hide */
+font-size:15px;
+color:#fff5b0;
+font-weight:bold;
+margin-left:-5px;
+float:left;
+}
+
+#columnleft{
+width:174px;
+float:left;
+display:block;
+}
+
+
+#columncenter{
+float:left;
+width:740px;
+display:block;
+}
+
+#dummybox{
+margin:10px; 
+margin-top:11px; 
+margin-bottom:20px; 
+min-height:200px;
+display:block;
+}
+
+#mycontent {
+
+padding-left:16px;
+padding-right:16px;
+padding-top:5px;
+}
+
+#positionneur {
+height:50px;
+display:block;
+}
+
+
+
+a.mymenu{
+color:#431e11;
+font-size:14px;
+display:block;
+height:21px;
+background-image:url(http://ukm.no/ukmno/grafikk/2010/menunorm.jpg);
+background-repeat:no-repeat;
+background-position:left;
+padding-left:30px;
+margin-top:6px;
+padding-top:3px;
+}
+
+a.mymenuact, a.mymenuact:hover, a.mymenu:hover{
+font-size:14px;
+display:block;
+height:21px;
+background-repeat:no-repeat;
+background-position:left;
+padding-left:30px;
+margin-top:6px;
+padding-top:3px;
+color:#111;
+background-image:url(http://ukm.no/ukmno/grafikk/2010/menuact.jpg);
+}
+
+#copyright2009 {
+text-align:center;
+font-size:10px;
+color:#fff;
+margin-bottom:6px;
+}
+
+a.frontpageh2{
+color:#48b973;
+font-size:15px;
+font-weight:bold;
+}
+
+a.frontpageh2:hover{
+color:#e44145;
+font-size:15px;
+font-weight:bold;
+}
+
+a.lesmer {
+background-image:url('http://ukm.no/ukmno/grafikk/2010/lesmer.png');
+diplay:block;
+padding-left:12px;
+float:right;
+font-size:10px;
+background-repeat:no-repeat;
+font-weight:bold;
+margin-right:6px;
+background-position:center left;
+}
+
+a.lesmer:hover {
+color:#e44145;
+}
+
+h1{
+color:#e44145;
+font-size:20px;
+}
+
+h2 {
+color:#111;
+font-size:17px;
+}
+
+h3 {
+color:#e44145;
+font-size:14px;
+}
+
+a{
+text-decoration:none;
+color:#48b973;
+}
+
+a:hover {
+color:#e44145;
+text-decoration:none;
+}
