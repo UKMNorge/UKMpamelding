@@ -26,7 +26,7 @@ $DESIGN = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:
  <div id="UKM_top">
   <div id="UKMnav-menu">
    <div id="UKMlogo">
-    <a href="http://ukm.no/"><img src="http://om.ukm.no/wp-content/themes/manifesto/images/ukmlogo.png" border="0" /></a>
+    <a href="http://ukm.no/"><img src="http://grafikk.ukm.no/profil/logo/UKM_logo.png" border="0" /></a>
    </div>
    <ul>
     <li id="UKMnav-menu_pamelding" ><a href="#"></a></li>

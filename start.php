@@ -23,7 +23,7 @@ $CONTENT .= '<br /><br /><h1>'.$lang['subscribe'].'</h1>'
 		  
 
 ## FIND ALL FYLKE AND LOOP
-$fylker = new SQL("SELECT * FROM `smartcore_fylke` ORDER BY `name` ASC");
+$fylker = new SQL("SELECT * FROM `smartukm_fylke` ORDER BY `name` ASC");
 $fylker = $fylker->run();
 while($f = mysql_fetch_assoc($fylker)) {
 	if($f['id'] > 20)
