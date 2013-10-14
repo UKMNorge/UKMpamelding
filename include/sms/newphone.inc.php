@@ -48,6 +48,10 @@
 		$SMS = $SMS->newPwd();
 		$_SESSION['SMSpass'] = $SMS;
 			$message = str_replace('#code', $SMS, $lang['confirmSMS']);
+			$SMS = new SMS('pamelding',2);
+			$SMS->text($message)->to($_POST['p_phone_first'])->from('UKMNorge')->ok();			
+
+/*
 			$smsURL = 'http://www.sveve.no/SMS/SendSMS?user=ukm&msg='.urlencode(utf8_encode($message)).'&to='.$_POST['p_phone_first'].'&from=UKMNorge';
 			$APIres = new APIcall('SMSlog', array('to'=>$_POST['p_phone_first'], 'message'=>urlencode($message),'from'=>'UKMNorge'));
 			$curl = curl_init();
@@ -66,6 +70,7 @@
 									  'logsystem'=>'pameldingUKMnew',
 									  'logmessage'=>$message));
 			$newLogSQL12->run();
+*/
 			
 		logIt($_SESSION['B_ID'], 5, $SMS);
 	} else {
