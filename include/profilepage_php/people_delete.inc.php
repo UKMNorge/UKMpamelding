@@ -11,9 +11,9 @@ $del_rel = $del_rel->run();
 if($del_rel) {
 	$MSG = array(true, $lang['people_deleted']);
 //	stat_realtime_remove($KOMMUNE_ID, $_SESSION['B_ID'], $_POST['someID_input'], $SEASON);
-	require_once('UKM/innslag.class.php');
-	$band_object_2013 = new innslag($_SESSION['B_ID']);
-	$band_object_2013->statistikk_oppdater();
+	require_once('UKM/curl.class.php');
+	$CURL = new UKMCURL();
+	$CURL->request('http://api.ukm.no/innslag:statistikk_oppdater/'. $_SESSION['B_ID']);
 
 	logIt($_SESSION['B_ID'], 18, $_POST['someID_input']);
 } else {

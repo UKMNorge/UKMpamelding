@@ -19,9 +19,9 @@ if(isset($_GET['delete']) && isset($_GET['md'])) {
 		# REPORT MSG
 		$MSG = array(true, $b['b_name']. ' ble avmeldt!');
 //		stat_realtime_avmeld($KOMMUNE_ID, $_GET['delete'], $SEASON);
-		require_once('UKM/innslag.class.php');
-		$band_object_2013 = new innslag($_GET['delete']);
-		$band_object_2013->statistikk_oppdater();
+		require_once('UKM/curl.class.php');
+		$CURL = new UKMCURL();
+		$CURL->request('http://api.ukm.no/innslag:statistikk_oppdater/'. $_GET['delete']);
 
 		logIt($b['b_id'], 23, $_SERVER['REMOTE_ADDR']);
 	} else

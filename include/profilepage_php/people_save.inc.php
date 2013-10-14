@@ -62,9 +62,9 @@ if(isset($_POST['p_firstname']) && isset($_POST['p_lastname'])) {
 		$P_ID = isset($P_ID) ? $P_ID : mysql_insert_id();
 		logIt($_SESSION['B_ID'], $p_log_code, $P_ID);
 //		stat_realtime_add($KOMMUNE_ID, $_SESSION['B_ID'], false, false, $P_ID, $SEASON);
-		require_once('UKM/innslag.class.php');
-		$band_object_2013 = new innslag($_SESSION['B_ID']);
-		$band_object_2013->statistikk_oppdater();
+		require_once('UKM/curl.class.php');
+		$CURL = new UKMCURL();
+		$CURL->request('http://api.ukm.no/innslag:statistikk_oppdater/'. $_SESSION['B_ID']);
 
 	## FIX RELATION (DELETE AND INSERT)
 		$rel_infos = array('b_id'=>$_SESSION['B_ID'],
