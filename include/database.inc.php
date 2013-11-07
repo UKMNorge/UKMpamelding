@@ -18,7 +18,6 @@ class SQL {
 			$sql = str_replace('#'.$key, mysql_real_escape_string(trim(strip_tags($val))), $sql);
 		}
 		$this->sql = $sql;
-		echo $this->sql .'<br />';
 	}
 	
 	function run($what='resource', $name='') {
