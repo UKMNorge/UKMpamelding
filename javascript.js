@@ -48,7 +48,7 @@ function forgottenDinSidePass(adresse) {
 	if(epost.length == 0)
 		alert('Du må skrive inn e-postadressen din i e-postfeltet');
 	else
-		window.location.href = window.location.href + adresse + epost;
+		window.location.href = window.location.href.split('?')[0] + adresse + epost;
 }
 <!-- -- -- -- -- -- -- -- -- -- -- SMS-PAGE -- -- -- -- -- -- -- -- -- -- -->
 function waitAndGo(untill) {
