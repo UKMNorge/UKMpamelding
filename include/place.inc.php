@@ -40,7 +40,7 @@ if(isset($PLACE_ID)) {
 */
 	require_once('UKM/monstring.class.php');
 	$pl = new monstring($PLACE_ID);
-	$pl_contact = $pl->hovedkontakt($KOMMUNE_ID);
+	$pl_contact = $pl->hovedkontakt($KOMMUNE_ID, true);
 	## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ## !!! ##
 	
 /*	if($_SESSION['UKM_PAM_BROWSER']!='Internet Explorer' && $pl_contact['picture'] > 0)
