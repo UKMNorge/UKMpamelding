@@ -15,10 +15,6 @@ class SQL {
 		foreach($keyval as $key => $val) {
 			if (get_magic_quotes_gpc())
 				$val = stripslashes($val);
-			if(!is_string($val)) {
-				var_dump($val);
-				debug_print_backtrace();
-			}
 			$sql = str_replace('#'.$key, mysql_real_escape_string(trim(strip_tags($val))), $sql);
 		}
 		$this->sql = $sql;
