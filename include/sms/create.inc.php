@@ -236,7 +236,7 @@
 										  'logmessage'=>$message));
 				$newLogSQL12->run();			
 */
-			logIt($B_ID, 5, $SMS);
+			logIt($B_ID, 5, $_SESSION['SMSpass']);
 		}
 	if(in_array($kategori, $WORK))
 		$MSG = array(true, 'Personen ble lagt til');
