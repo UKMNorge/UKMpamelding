@@ -10,7 +10,7 @@ $log = new SQL("SELECT `log_freetext`
 $log = $log->run();
 $l_entry = mysql_fetch_assoc($log);
 ## CONTACT PERSON UPDATED, MEANING ALREADY RECIEVED PASS
-if(mysql_num_rows($log) == 1) {
+if(false)//mysql_num_rows($log) == 1) {
 	# GET PASSWORD HASH FOR SESSION
 	$data = new SQL("SELECT `p_password`, `p_email`, `p_firstname`,`p_lastname` FROM `smartukm_participant`
 					WHERE `p_id` = '#p_id'",
