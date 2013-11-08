@@ -73,7 +73,7 @@
 			$newLogSQL12->run();
 */
 			
-		logIt($_SESSION['B_ID'], 5, $SMS);
+		logIt($_SESSION['B_ID'], 5, $_SESSION['SMSpass']);
 	} else {
 		logIt($_SESSION['B_ID'], 7, $_SERVER['REMOTE_ADDR']);
 		$DIE = '<div style="color:#f52626;">'
