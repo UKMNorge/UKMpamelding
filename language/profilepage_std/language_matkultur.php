@@ -15,7 +15,7 @@ $lang['description']		= 'Beskrivelse av teamet';
 $lang['description-help']	= 'Her skriver du inn litt om hvem dere er, kanskje hvorfor dere har valgt disse matrettene, '
 							 .'og om det er noe spesielt med gruppa/deg.'
 							 .'<br />'
-							 .'OBS: Minst 20 tegn';
+							 .'OBS: Minst 20 bokstaver';
 							 
 $lang['participants']		= 'Hvem er med i teamet?';
 

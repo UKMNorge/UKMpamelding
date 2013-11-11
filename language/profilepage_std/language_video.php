@@ -15,7 +15,7 @@ $lang['description']		= 'Beskrivelse av gruppen og filmene';
 $lang['description-help']	= 'Her skriver du inn litt om hvem dere er, hvordan filmen er laget, '
 							 .'og om det er noe spesielt som skjedde mens den ble laget.'
 							 .'<br />'
-							 .'OBS: Minst 20 tegn';
+							 .'OBS: Minst 20 bokstaver';
 							 
 $lang['participants']		= 'Hvem har v&aelig;rt med p&aring; &aring; lage filmene?';
 

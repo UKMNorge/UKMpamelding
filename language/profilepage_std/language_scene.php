@@ -18,7 +18,7 @@ $lang['description']		= 'Beskrivelse av gruppen og l&aring;tene';
 $lang['description-help']	= 'Her skriver du inn litt om hvem dere er, kanskje hvorfor dere har valgt disse l&aring;tene, '
 							 .'og om det er noe spesielt med gruppa/deg. Denne teksten leser konferansierene, slik at de har tips til hva de kan si om deg/dere'
 							 .'<br />'
-							 .'OBS: Minst 20 tegn';
+							 .'OBS: Minst 20 bokstaver';
 							 
 $lang['participants']		= 'Hvem er med i innslaget?';
 

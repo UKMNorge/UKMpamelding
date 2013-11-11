@@ -1,7 +1,7 @@
 <?php
 require_once('language/profilepage_std/language.php');
 
-$lang['infos']				= 'Info om skaper';
+$lang['infos']				= 'Info om kunstner';
 
 $lang['obs'] 				= 'Om du/dere har laget flere kunstverk, s&aring; husk at feltene i denne boksen gjelder alle kunstverkene';
 
@@ -14,7 +14,7 @@ $lang['group-help']			= 'F.eks. teamX, kunstgjengen fra Stavanger, Ola Nordmann,
 $lang['description']		= 'Beskrivelse av gruppen og kunstverkene';
 $lang['description-help']	= 'Her skriver du inn litt om hvem du/dere er, hvordan kunstverkene er laget, '
 							 .'og om det er noe spesielt som skjedde mens de ble laget.'
-							 .'<br />OBS: Minst 20 tegn';
+							 .'<br />OBS: Minst 20 bokstaver';
 							 
 $lang['participants']		= 'Hvem har v&aelig;rt med p&aring; &aring; lage kunstverkene?';
 

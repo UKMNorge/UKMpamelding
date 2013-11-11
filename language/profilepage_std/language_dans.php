@@ -18,7 +18,7 @@ $lang['description']		= 'Beskrivelse av gruppen og dansene';
 $lang['description-help']	= 'Her skriver du inn litt om hvem dere er, kanskje hvorfor dere har valgt disse dansene, '
 							 .'og om det er noe spesielt med gruppa/deg.'
 							 .'<br />'
-							 .'OBS: Minst 20 tegn';
+							 .'OBS: Minst 20 bokstaver';
 							 
 $lang['participants']		= 'Hvem er med i innslaget?';
 

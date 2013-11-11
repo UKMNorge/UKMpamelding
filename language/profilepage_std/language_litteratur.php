@@ -9,7 +9,7 @@ $lang['genre-help']			= 'F.eks. roman, novelle, limerick eller lignende';
 
 $lang['techdemands']		= 'Hvordan vil du presentere teksten(e)?';
 $lang['techdemands-help']	= 'Vil du fremf&oslash;re litteraturinnslaget selv, at det skal stilles ut sammen med kunsten, eller kanskje begge deler?<br />'
-							. '(du m&aring; skrive minimum 6 tegn)';
+							. '(du m&aring; skrive minimum 6 bokstaver)';
 
 $lang['description']		= 'Beskrivelse av forfattere og titler';
 
