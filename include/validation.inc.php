@@ -1,4 +1,7 @@
 <?php
+require_once('UKM/inc/validation.inc.php');
+/*
+
 function validateBand($bid) {
 	global $SEASON;
 
@@ -387,3 +390,4 @@ function validEmail($email) {
 }
 
 ?>
+*/
