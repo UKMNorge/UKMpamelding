@@ -75,18 +75,18 @@ $lang['msg_upd'] =		'Hei!'
 						.'Skulle du lure p&aring; noe med p&aring;meldingen, er det bare &aring; sende oss en e-post p&aring; support@ukm.no, eller ringe oss p&aring;'
 						.' telefon: 46 42 16 25';
 
-$lang['msg_new']		= nl2br('<strong>Velkommen som deltaker på UKM 2014</strong>
-Hvis du vil melde på flere innslag, eller oppdatere din påmelding så gjør du dette her:
+$lang['msg_new']		= nl2br('<strong>Velkommen som deltaker p&aring; UKM 2014</strong>
+Hvis du vil melde p&aring; flere innslag, eller oppdatere din p&aring;melding s&aring; gj&oslash;r du dette her:
 http://pamelding.ukm.no/?steg=dinside
 
-Brukernavnet ditt i år er: #USER
-Passordet ditt i år er: #PASS
+Brukernavnet ditt i &aring;r er: #USER
+Passordet ditt i &aring;r er: #PASS
  
-<strong>HUSK:</strong> Ta vare på denne e-posten.
-Det er nemlig mye enklere å bruke "Din Side" enn å gjøre en ny påmelding fra utsiden, 
-for da må du svare på SMS på nytt, og passordet ditt vil bli skiftet.
+<strong>HUSK:</strong> Ta vare p&aring; denne e-posten.
+Det er nemlig mye enklere &aring; bruke "Din Side" enn &aring; gj&oslash;re en ny p&aring;melding fra utsiden, 
+for da m&aring; du svare p&aring; SMS p&aring; nytt, og passordet ditt vil bli skiftet.
  
-Hvis du lurer på noe med påmeldingen, kan du sende oss en e-post på support@ukm.no, eller ringe telefon: 46 42 16 25');
+Hvis du lurer p&aring; noe med p&aring;meldingen, kan du sende oss en e-post p&aring; support@ukm.no, eller ringe telefon: 46 42 16 25');
 $lang['msg_upd']		= $lang['msg_new'];
 
 ?>
