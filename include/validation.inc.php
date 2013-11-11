@@ -1,5 +1,5 @@
 <?php
-require_once('UKM/inc/validation.inc.php');
+require_once('UKM/inc/validate_innslag.inc.php');
 /*
 
 function validateBand($bid) {
