@@ -1,4 +1,4 @@
-<?php
+x<?php
 $DESIGN = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="nb-NO">
 
@@ -20,6 +20,21 @@ $DESIGN = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:
 <link rel="stylesheet" type="text/css" href="http://ukm.no/wp-content/themes/manifesto/style_ie7.css" />
 <![endif]-->
 <link rel="stylesheet" href="stil.css" type="text/css" />
+
+
+<script type="text/javascript">
+ 
+var _gaq = _gaq || [];
+  _gaq.push([\'_setAccount\', \'UA-46216680-5\']);
+  _gaq.push([\'_trackPageview\']);
+ 
+  (function() {
+    var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;
+    ga.src = (\'https:\' == document.location.protocol ? \'https://\' : \'http://\') + \'stats.g.doubleclick.net/dc.js\';
+    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
 </head>
 
 <body onLoad="validateFormPL();">
