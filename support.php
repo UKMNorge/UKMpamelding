@@ -42,20 +42,39 @@ if(!isset($_SESSION['when'])) {
 					 array('b_id'=>$_SESSION['B_ID']));
 	$band = $query->run('array');
 	
-	$message = '<strong>Navn:</strong><br />'.$band['p_firstname'].' '.$band['p_lastname']
-			. ' <br /><strong>Svar er lovt innen</strong><br /> ' . $when
-			. ' <br /><strong>Mobil:</strong><br />'.$band['p_phone']
-			. ' <br /><strong>E-post:</strong><br />'.$band['p_email'];
-	$headers = 'From: '.$band['p_email'].'' . "\r\n" .
-	   'Reply-To: '.$band['p_email'].'' . "\r\n" .
-	   'X-Mailer: PHP/' . phpversion();
-	mail('support@ukm.no', 'SMS-KODE FEILET BID: '.$band['b_id']. ' - ' . $band['p_phone'] . ' IP: '. $_SERVER['REMOTE_ADDR'], $message, $headers);
-	
+	$message = '<h1>SMS-validering feilet for B-ID:'. $_SESSION['b_id'].'</h1>'
+			. '<p><strong>Dette betyr at innslaget ikke har fått SMS med engangskode i løpet av 5 minutter.</strong></p>'
+			. '<h3>Dette skjer videre</h3>'
+			. '<p>Brukeren har fått beskjed om å sende en SMS til 1963 (motsatt validering). Hvis dette lykkes vil du få en ny e-post fra valideringssystemet med beskjed om at alt er i orden.</p>'
+			. '<p><strong>Hvis du <u>ikke</u> får en e-post fra valideringssystemet må du:</p>'
+			. '<ol>'
+			.  '<li>Sjekke at mobilnummeret nedenfor har en tilknytning til navnet (telefonkatalog, facebook, google osv). Hvis telefonen er registrert på en person med samme etternavn eller andre lignende koblinger er dette ok. Meningen med denne sjekken er å utelukke at dette kan være et mobbe-forsøk</li>'
+			.  '<li><strong>Hvis riktig navn og mobilnummer:</strong>Godkjenne innslaget manuelt (<a href="http://ukm.no/wp-admin/?page=UKMsupport&action=kjentefeil#manuellvalidering</li>'
+			.  '<li><strong>Hvis feil navn:</strong> Putt e-posten i mappen "ikke validert pga feil navn"</li>'
+			. '</ol>'
+			. '<h3>Informasjon om innslaget</h3>'
+			. '<ol>'
+			.  '<li><strong>B-ID (innslagsID):</strong> '. $_SESSION['b_id'] .'</li>'
+			.  '<li><strong>Navn:</strong> '.$band['p_firstname'].' '.$band['p_lastname'] .'</li>'
+			.  '<li><strong>Svar er lovt innen</strong> ' . $when .'</li>'
+			.  '<li><strong>Mobil:</strong> '.$band['p_phone'] .'</li>'
+			.  '<li><strong>E-post:</strong> '.$band['p_email'] .'</li>'
+			.  '<li><strong>IP-adresse:</strong> '. $_SERVER['REMOTE_ADDR'] .'</li>'
+			. '</ol>'
+			;
+
 	$automate = "INSERT INTO `smartukm_band_manualvalidate` 
 				(`v_id` ,`b_id` ,`v_phone` ,`v_complete` ,`v_time`)
 				VALUES
 				('' , '".$_SESSION['B_ID']."', '".$band['p_phone']."', 'false',CURRENT_TIMESTAMP);";
 	$automate = mysql_query($automate);
+	
+	require_once('UKM/mail.class.php');
+	$epost = new UKMmail();
+	$epost->text($message)
+		  ->to('support@ukm.no')
+		  ->subject('SMS-VALIDERING B-ID: '.$band['b_id'])
+		  ->ok();
 	
 ## PAGE IS REFRESHED, DO NOT UPDATE THE PAGE SHOWN TO THE USER
 } else {
