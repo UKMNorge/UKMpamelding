@@ -42,7 +42,7 @@ if(!isset($_SESSION['when'])) {
 					 array('b_id'=>$_SESSION['B_ID']));
 	$band = $query->run('array');
 	
-	$message = '<h1>SMS-validering feilet for B-ID:'. $_SESSION['b_id'].'</h1>'
+	$message = '<h1>SMS-validering feilet for B-ID:'. $_SESSION['B_ID'].'</h1>'
 			. '<p><strong>Dette betyr at innslaget ikke har fått SMS med engangskode i løpet av 5 minutter.</strong></p>'
 			. '<h3>Dette skjer videre</h3>'
 			. '<p>Brukeren har fått beskjed om å sende en SMS til 1963 (motsatt validering). Hvis dette lykkes vil du få en ny e-post fra valideringssystemet med beskjed om at alt er i orden.</p>'
@@ -54,7 +54,7 @@ if(!isset($_SESSION['when'])) {
 			. '</ol>'
 			. '<h3>Informasjon om innslaget</h3>'
 			. '<ol>'
-			.  '<li><strong>B-ID (innslagsID):</strong> '. $_SESSION['b_id'] .'</li>'
+			.  '<li><strong>B-ID (innslagsID):</strong> '. $_SESSION['B_ID'] .'</li>'
 			.  '<li><strong>Navn:</strong> '.$band['p_firstname'].' '.$band['p_lastname'] .'</li>'
 			.  '<li><strong>Svar er lovt innen</strong> ' . $when .'</li>'
 			.  '<li><strong>Mobil:</strong> '.$band['p_phone'] .'</li>'
