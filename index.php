@@ -1,6 +1,8 @@
 <?php
 ini_set('session.cookie_domain', 'pamelding.ukm.no');
 ini_set('session.gc_maxlifetime', 60*60*8);
+session_save_path('/tmp/pamelding.ukm.no');
+ini_set('session.gc_probability', 1);
 session_start();
 error_reporting(E_ALL);
 
