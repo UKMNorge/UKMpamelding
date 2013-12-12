@@ -73,7 +73,7 @@ if(!isset($_SESSION['when'])) {
 	$epost = new UKMmail();
 	$epost->text($message)
 		  ->to('support@ukm.no')
-		  ->subject('SMS-VALIDERING B-ID: '.$band['b_id'])
+		  ->subject('SMS-validering B-ID: '.$band['b_id'])
 		  ->ok();
 	
 ## PAGE IS REFRESHED, DO NOT UPDATE THE PAGE SHOWN TO THE USER
