@@ -34,12 +34,13 @@ while($f = mysql_fetch_assoc($fylker)) {
 			  . '<a style="display:none;" id="skjul_'.$f['id'].'" href="javascript:hide('.$f['id'].');">Skjul lokalm&oslash;nstringer</a>'
 			  . '<div id="lokal_'.$f['id'].'" style="display: none;">';
 	
-	$kommuner = new SQL("SELECT `smartcore_kommune`.`name`, `smartcore_kommune`.`id`, `smartukm_place`.`pl_name`, `smartukm_place`.`pl_id`  
-						FROM `smartcore_kommune`
-						JOIN `smartukm_rel_pl_k` ON (`smartcore_kommune`.`id` = `smartukm_rel_pl_k`.`k_id`)
+	$kommuner = new SQL("SELECT `smartukm_kommune`.`name`, `smartukm_kommune`.`id`, `smartukm_place`.`pl_name`, `smartukm_place`.`pl_id`  
+						FROM `smartukm_kommune`
+						JOIN `smartukm_rel_pl_k` ON (`smartukm_kommune`.`id` = `smartukm_rel_pl_k`.`k_id`)
 						JOIN `smartukm_place` ON (`smartukm_rel_pl_k`.`pl_id` = `smartukm_place`.`pl_id`)
-						WHERE `smartcore_kommune`.`idfylke` = '#fylke'
+						WHERE `smartukm_kommune`.`idfylke` = '#fylke'
 						AND `smartukm_place`.`season` = '#season'
+						AND `smartukm_kommune`.`id` NOT REGEXP '^.+90$'
 						ORDER BY `smartukm_place`.`pl_name` ASC",
 						array('fylke'=>$f['id'], 'season'=>$SEASON));
 	$kommuner = $kommuner->run();
