@@ -11,8 +11,8 @@ if(!isset($KOMMUNE_ID) || $KOMMUNE_ID == 0) {
 			  FROM `smartukm_band_type`
 			  JOIN `smartukm_rel_pl_bt` ON `smartukm_rel_pl_bt`.`bt_id` = `smartukm_band_type`.`bt_id`
 			  JOIN `smartukm_rel_pl_k` ON `smartukm_rel_pl_k`.`pl_id` = `smartukm_rel_pl_bt`.`pl_id`
-			  JOIN `smartcore_kommune` ON `smartcore_kommune`.`id` = `smartukm_rel_pl_k`.`k_id`
-			  WHERE `smartcore_kommune`.`id`='#k_id'
+			  JOIN `smartukm_kommune` ON `smartukm_kommune`.`id` = `smartukm_rel_pl_k`.`k_id`
+			  WHERE `smartukm_kommune`.`id`='#k_id'
 			  AND `season` = '#season'",
 			  array('k_id'=>$KOMMUNE_ID,'season'=>$SEASON));
 	$result = $query->run();
