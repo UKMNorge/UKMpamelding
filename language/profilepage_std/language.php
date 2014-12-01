@@ -75,7 +75,7 @@ $lang['msg_upd'] =		'Hei!'
 						.'Skulle du lure p&aring; noe med p&aring;meldingen, er det bare &aring; sende oss en e-post p&aring; support@ukm.no, eller ringe oss p&aring;'
 						.' telefon: 46 42 16 25';
 
-$lang['msg_new']		= nl2br('<strong>Velkommen som deltaker p&aring; UKM 2014</strong>
+$lang['msg_new']		= nl2br('<strong>Velkommen som deltaker p&aring; UKM 2015</strong>
 Hvis du vil melde p&aring; flere innslag, eller oppdatere din p&aring;melding s&aring; gj&oslash;r du dette her:
 http://pamelding.ukm.no/?steg=dinside
 
