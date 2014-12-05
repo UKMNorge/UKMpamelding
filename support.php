@@ -49,7 +49,7 @@ if(!isset($_SESSION['when'])) {
 			. '<p><strong>Hvis du <u>ikke</u> får en e-post fra valideringssystemet må du:</strong></p>'
 			. '<ol>'
 			.  '<li>Sjekke at mobilnummeret nedenfor har en tilknytning til navnet (telefonkatalog, facebook, google osv). Hvis telefonen er registrert på en person med samme etternavn eller andre lignende koblinger er dette ok. Meningen med denne sjekken er å utelukke at dette kan være et mobbe-forsøk</li>'
-			.  '<li><strong>Hvis riktig navn og mobilnummer:</strong>Godkjenne innslaget manuelt (<a href="http://ukm.no/wp-admin/?page=UKMsupport&action=kjentefeil#manuellvalidering">Gå til support-modulen</a>)</li>'
+			.  '<li><strong>Hvis riktig navn og mobilnummer:</strong>Godkjenne innslaget manuelt (<a href="http://ukm.no/wp-admin/network/?page=UKMsupport">Gå til support-modulen</a>)</li>'
 			.  '<li><strong>Hvis feil navn:</strong> Putt e-posten i mappen "ikke validert pga feil navn"</li>'
 			. '</ol>'
 			. '<h3>Informasjon om innslaget</h3>'
